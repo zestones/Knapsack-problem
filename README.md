@@ -22,14 +22,14 @@ The algorithm implemented in this document are the followings:
   - [Algorithm](#algorithm)
   - [Test](#test)
     - [Generator](#generator-1)
-    - [Test akgorithm](#test-akgorithm)
+    - [Test algorithm](#test-algorithm)
 - [Running instruction](#running-instruction)
   - [Run several test](#run-several-test)
   - [Display Solutions](#display-solutions)
 - [Data result](#data-result)
   - [Export data result](#export-data-result)
   - [Architecture of the result folder](#architecture-of-the-result-folder)
-  - [Import data to excel](#import-data-to-excel)
+  - [How to read the result](#how-to-read-the-result)
 
 
 # Installation
@@ -60,7 +60,7 @@ The Solution class, is the class that will store the solution computed by the al
 ## Algorithm
 ## Test
 ### Generator
-### Test akgorithm
+### Test algorithm
 
 # Running instruction
 
@@ -140,4 +140,4 @@ result-data
 │   │   └─── ...
 │   └─── ...
 ```
-## Import data to excel
+## How to read the result
