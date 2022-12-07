@@ -70,7 +70,6 @@ The Solution class, is the class that will store the solution computed by the al
 ## Export data result
 
 ## Architecture of the result folder
-
 ```
 result-data
 │   
