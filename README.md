@@ -15,28 +15,26 @@ The algorithm implemented in this document are the followings:
 - [Installation](#installation)
   - [Jupiter Lab](#jupiter-lab)
   - [Python](#python)
+- [Data \& Analyse](#data--analyse)
 - [Architechture](#architechture)
   - [Main](#main)
   - [Class](#class)
-  - [Generator](#generator)
-  - [Algorithm](#algorithm)
-  - [Test](#test)
-    - [Generator](#generator-1)
-    - [Test algorithm](#test-algorithm)
-- [Running instruction](#running-instruction)
-  - [Run several test](#run-several-test)
-  - [Display Solutions](#display-solutions)
-- [Data result](#data-result)
-  - [Export data result](#export-data-result)
+  - [Source data](#source-data)
   - [Architecture of the result folder](#architecture-of-the-result-folder)
-  - [How to read the result](#how-to-read-the-result)
 
 
 # Installation
 
 ## Jupiter Lab
+To launch this you need Jupiter lab, we advice you to use it in VSCode.
 
 ## Python
+You will need to have python on your machine and have or install the package listed in the main section in the project.
+
+# Data & Analyse
+
+For each algorithm we provide curves and tables inside the pdf files that are joined with this report, we give the references of these documents inside all the sections below. 
+The curves and the graphs are in the folder ```results data/analysis/all```
 
 # Architechture
 
@@ -56,18 +54,13 @@ We will differentiate the items by their "id" (their position), inside the array
 
 The Solution class, is the class that will store the solution computed by the alogorithm, this class will store the name of the algorithm that have solved the problem, the solution founded and some data about the memory usage during the computation of the algorithm. We will solve a probleme multiple time with different algorithm, that is why we created an array, called "problem_solutions" that will store the Solutions object.
 
-## Generator
-## Algorithm
-## Test
-### Generator
-### Test algorithm
+## Source data
+<p>There is two possibilities to test the algorithm. The data can be provided by the user from the terminal or the user can load the data from a dataset file that are in the dataset folder. </p>
 
-# Running instruction
+> **NOTE**\
+> If you load data from the dataset you musn't launch the generators.
 
-## Run several test
-## Display Solutions
-# Data result
-## Export data result
+
 
 ## Architecture of the result folder
 ```
@@ -139,4 +132,3 @@ result-data
 │   │   └─── ...
 │   └─── ...
 ```
-## How to read the result
