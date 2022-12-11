@@ -1,13 +1,25 @@
 # Knapsack problem 
 The objective of this project is to implement some algorithms for solving the Knapsack Problem and to provide an experimental study of their running time and quality.
-The algorithm implemented in this document are the followings: 
-<ul>
-    <li> The brute-force algorithm that explore all the possible solutions in a systematic way,</li>
-    <li> Multiple branch and bound version </li>
-    <ul>
-        <li> DFS </li>
-    </ul>
-</ul> 
+The algorithm implemented in this project are the followings: 
+
+1. The brute-force algorithm that explore all the possible solutions in a systematic way,
+2. Dynamic programming approach,
+   1. A Dynamic programing version,
+   2. And a Top Down version that optimizes the number of calls
+3. The Fully polynomial time approximation scheme
+4. A version based on a randomized approach (MCMC - Markov chain Monte Carlo).
+5. Four Greedy version : 
+   1. Greedy weight
+   2. Greedy Value
+   3. Greedy Ratio
+   4. Greedy Fractional
+6. Two Branch and bound version :
+   1.  Branch and Bound BFS (Best First Search)
+   2.  Branch and Bound DFS (Depth first search)
+7. Two genetic algorithm
+   1. One that take the optimal solution (Genetic optima)
+   2. And the second that search the best capacity (Genetic No Optima)
+8. A version based on Ant colony approach.  
 
 # Table of Contents
 - [Knapsack problem](#knapsack-problem)
@@ -15,12 +27,9 @@ The algorithm implemented in this document are the followings:
 - [Installation](#installation)
   - [Jupiter Lab](#jupiter-lab)
   - [Python](#python)
-- [Data \& Analyse](#data--analyse)
-- [Architechture](#architechture)
-  - [Main](#main)
-  - [Class](#class)
-  - [Source data](#source-data)
+- [Data \& Analyze](#data--analyze)
   - [Architecture of the result folder](#architecture-of-the-result-folder)
+  - [File generated](#file-generated)
 
 
 # Installation
@@ -28,46 +37,28 @@ The algorithm implemented in this document are the followings:
 ## Jupiter Lab
 To launch this you need Jupiter lab, we advice you to use it in VSCode.
 
+Get started with VSCode:\
+https://code.visualstudio.com/docs/datascience/jupyter-notebooks
+
 ## Python
-You will need to have python on your machine and have or install the package listed in the main section in the project.
+You will need to have python on your machine and have or install the package listed in the main section in the source code.
 
-# Data & Analyse
+# Data & Analyze
 
-For each algorithm we provide curves and tables inside the pdf files that are joined with this report, we give the references of these documents inside all the sections below. 
-The curves and the graphs are in the folder ```results data/analysis/all```
+For each algorithm we provide curves and tables inside pdf files, we give the The curves and the graphs are in the folder ```results data/analysis/all```
 
-# Architechture
-
-The project is separated in different section, each section has a different purpose. You will find below the details of the architechture of this project.
-
-## Main
-
-The main section have all the import needed to run the program, we also define some constant and global variable.
-
-## Class
-
-In this section we will reference all the class used in the program
-We can find the two principle class of the project, the item and solution class.
-
-The Item class, is the class that represent an object that we will put in the knapsack, thus each item have a weight and value.
-We will differentiate the items by their "id" (their position), inside the array named "choosed_items"
-
-The Solution class, is the class that will store the solution computed by the alogorithm, this class will store the name of the algorithm that have solved the problem, the solution founded and some data about the memory usage during the computation of the algorithm. We will solve a probleme multiple time with different algorithm, that is why we created an array, called "problem_solutions" that will store the Solutions object.
-
-## Source data
-<p>There is two possibilities to test the algorithm. The data can be provided by the user from the terminal or the user can load the data from a dataset file that are in the dataset folder. </p>
-
-> **NOTE**\
-> If you load data from the dataset you musn't launch the generators.
-
+The Excels source files are also provided inside the ```results data/analysis/``` folders.
 
 
 ## Architecture of the result folder
+
+The ``results-data`` folder contain two folder the ``raw-data`` folder which contain the data generated from the algorithm and the analysis folder which contain the analysis made with the raw data.
+
+Below an example of the architecture generated inside the ``raw-data`` folder when you generate data from the source code. 
+
 ```
 result-data
 │   
-│ 
-└─── analysis.xlsx
 │   
 └─── raw
 │   │   
@@ -132,3 +123,10 @@ result-data
 │   │   └─── ...
 │   └─── ...
 ```
+
+## File generated
+
+A file generated is named with the prefix `res` and followed by two numbers, the first number is the number of item and the second the capacity.
+For example `res-10-100` mean that the test was launched with 10 items and a capacity of 100.
+
+Then regarding the content of a generated file, the last 4 lines of the file correspond to the minimum, maximum and average time of execution and usage of memory of the algorithm, the last line is the solution finded by the algorithm.
